@@ -5,9 +5,11 @@ import string
 # Download required NLTK data
 try:
     nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
     nltk.data.find('corpora/wordnet')
 except LookupError:
     nltk.download('punkt')
+    nltk.download('punkt_tab')
     nltk.download('wordnet')
 
 lemmatizer = WordNetLemmatizer()
